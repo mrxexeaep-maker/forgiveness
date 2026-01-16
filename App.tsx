@@ -52,14 +52,15 @@ const App: React.FC = () => {
       
       case 20: return <CelebrationScreen onNext={nextStage} />;
       case 21: return <FuturePlan1 onNext={nextStage} />;
-      case 22: return <RespectPromise onNext={nextStage} />;
-      case 23: return <FuturePlan3 onNext={nextStage} />;
-      case 24: return <FuturePlan4 onNext={nextStage} />;
-      case 25: return <FuturePlan5 onNext={nextStage} />;
-      case 26: return <FuturePlan6 onNext={nextStage} />;
-      case 27: return <FuturePlan7 onNext={nextStage} />;
-      case 28: return <FuturePlan8 onNext={nextStage} />;
-      case 29: return <StartingOverScreen />;
+      case 22: return <FuturePlan2 onNext={nextStage} />;
+      case 23: return <RespectPromise onNext={nextStage} />;
+      case 24: return <FuturePlan3 onNext={nextStage} />;
+      case 25: return <FuturePlan4 onNext={nextStage} />;
+      case 26: return <FuturePlan5 onNext={nextStage} />;
+      case 27: return <FuturePlan6 onNext={nextStage} />;
+      case 28: return <FuturePlan7 onNext={nextStage} />;
+      case 29: return <FuturePlan8 onNext={nextStage} />;
+      case 30: return <StartingOverScreen />;
       default: return <WelcomeScreen onNext={nextStage} />;
     }
   };
@@ -70,14 +71,14 @@ const App: React.FC = () => {
             <div className="absolute top-0 left-0 w-full h-3 bg-pink-100/50">
                 <div 
                     className="h-full bg-[#ff8fa3] transition-all duration-700 ease-out shadow-[0_0_15px_#ff8fa3]" 
-                    style={{ width: `${(currentStage / (TOTAL_STAGES - 1)) * 100}%` }}
+                    style={{ width: `${(currentStage / (TOTAL_STAGES)) * 100}%` }}
                 />
             </div>
             {renderStage()}
         </div>
         <div className="mt-6 flex flex-col items-center gap-1">
           <p className="text-pink-600 font-bold tracking-widest text-sm uppercase opacity-60">
-            {currentStage < 20 ? `Healing Journey: Step ${currentStage + 1} / 20` : `Future Together: Promise ${currentStage - 19} / 10`}
+            {currentStage < 20 ? `Healing Journey: Step ${currentStage + 1} / 20` : `Future Together: Promise ${currentStage - 19} / 11`}
           </p>
         </div>
     </div>
