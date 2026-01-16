@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For my Best Friend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+          font-family: 'Quicksand', sans-serif; 
+          overflow-x: hidden; 
+          background: #ffe4e6;
+        }
+        
+        .clay-card {
+          background: #ffffff;
+          border-radius: 50px;
+          box-shadow: 20px 20px 60px #d9c2c4,
+                     -20px -20px 60px #ffffff,
+                     inset 4px 4px 8px rgba(0,0,0,0.05);
+          border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .clay-btn {
+          border-radius: 25px;
+          background: #ff8fa3;
+          box-shadow: 8px 8px 16px #d9c2c4,
+                     -8px -8px 16px #ffffff,
+                     inset 4px 4px 8px rgba(255,255,255,0.4);
+          transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          border: none;
+        }
+
+        .clay-btn:hover {
+          transform: translateY(-5px) scale(1.05);
+          box-shadow: 12px 12px 20px #d9c2c4,
+                     -12px -12px 20px #ffffff;
+        }
+
+        .clay-btn:active {
+          transform: translateY(2px) scale(0.98);
+          box-shadow: inset 6px 6px 12px rgba(0,0,0,0.1);
+        }
+
+        @keyframes float {
+          0% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-15px) rotate(2deg); }
+          100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .floating { animation: float 4s ease-in-out infinite; }
+
+        .page-transition {
+          animation: slideIn 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        @keyframes slideIn {
+          from { opacity: 0; transform: translateY(30px) scale(0.95); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="text-slate-800">
+    <div id="root"></div>
+</body>
+</html>
